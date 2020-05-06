@@ -430,5 +430,5 @@ grokdump: ia32.release
 # Dependencies.
 # Remember to keep these in sync with the DEPS file.
 dependencies:
-	git clone git@github.com:svn2github/gyp.git build/gyp
-	git clone git@github.com:svn2github/icu46.git third_party/icu
+	git clone https://github.com/svn2github/gyp.git build/gyp
+	git clone https://github.com/svn2github/icu46.git third_party/icu
