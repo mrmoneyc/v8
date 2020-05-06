@@ -136,7 +136,7 @@ endif
 # deprecation_warnings=on
 ifeq ($(deprecationwarnings), on)
   GYPFLAGS += -Dv8_deprecation_warnings=1
-endif 
+endif
 # arm specific flags.
 # armv7=false/true
 ifeq ($(armv7), false)
@@ -430,8 +430,5 @@ grokdump: ia32.release
 # Dependencies.
 # Remember to keep these in sync with the DEPS file.
 dependencies:
-	svn checkout --force http://gyp.googlecode.com/svn/trunk build/gyp \
-	    --revision 1685
-	svn checkout --force \
-	    https://src.chromium.org/chrome/trunk/deps/third_party/icu46 \
-	    third_party/icu --revision 214189
+	git clone git@github.com:svn2github/gyp.git build/gyp
+	git clone git@github.com:svn2github/icu46.git third_party/icu
